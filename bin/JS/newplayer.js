@@ -3,7 +3,7 @@
 function createPlayer() {
     let firstName = document.getElementById("InputFirstName").value;
     let surname = document.getElementById("InputSurname").value;
-    const newPlayerUrl = '/canoe-polo-app/teamPlayers/addPlayer';
+    const newPlayerUrl = 'https://3.8.145.6/canoe-polo-app/teamPlayers/addPlayer';
     let data = { "firstName": firstName, "surname": surname };
     axios.post(newPlayerUrl, data)
         .then((response) => {
@@ -22,7 +22,7 @@ function createPlayer() {
 
 function populateSelect(elementToPopulate) {
     
-    axios.get('/canoe-polo-app/teamPlayers/getAllPlayers')
+    axios.get('https://3.8.145.6/canoe-polo-app/teamPlayers/getAllPlayers')
         .then((response) => {
             addToScreen(response.data, elementToPopulate);
             console.log(response);
