@@ -7,12 +7,14 @@ function createPlayer() {
     let data = { "firstName": firstName, "surname": surname };
     axios.post(newPlayerUrl, data)
         .then((response) => {
+        	debugger;
             window.alert("Player Added");
             console.log(response);
         })
 
         .catch(error => {
             window.alert("Player Not Added");
+            debugger;
             console.log(error);
         });
 
