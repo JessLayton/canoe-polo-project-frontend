@@ -14,7 +14,7 @@ function updatePlayer() {
 
     			if (teamPlayer.selected) {
 			
-			axios.put("https://3.8.145.6/canoe-polo-app/teamPlayers/updatePlayer/" + teamPlayer.value, data)
+			axios.put("/canoe-polo-app/teamPlayers/updatePlayer/" + teamPlayer.value, data)
 				.then(function (response) {
 					console.log(response);
 				});
