@@ -3,7 +3,7 @@ pipeline {
     stages {
             stage('--Build front-end--') {
                 steps {
-                    sh "docker build -t 9953136/app-jess-front-end ."
+                    sh "docker build -t 9953136/app-jess-front-end-master ."
                     }
             }
         stage('--Dockerise--') {
